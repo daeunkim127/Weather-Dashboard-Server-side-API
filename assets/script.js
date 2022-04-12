@@ -31,9 +31,9 @@ function populate5Dasy (data) {
         var humid=day.humidity;
         var icon=day.weather[0].icon;
         var div = document.createElement('div')
-        div.classList='card-weather col-md-12 col-sm-12 bg-dark text-light me-3'
+        div.classList='card-weather col bg-dark text-light'
         console.log(icon)
-        div.innerHTML = '<h3>'+date+'</h3><img src="http://openweathermap.org/img/wn/'+icon+'@2x.png"/><dl><dt>Temp:</dt><dd>'+temp+'</dd><dt>Wind:</dt> <dd>'+windSpeed+'</dd><dt>Humidity:</dt><dd>'+humid+'</dd></dl>';
+        div.innerHTML = '<h4>'+date+'</h4><img src="http://openweathermap.org/img/wn/'+icon+'@2x.png"/><dl><dt>Temp:</dt><dd>'+temp+'</dd><dt>Wind:</dt> <dd>'+windSpeed+'</dd><dt>Humidity:</dt><dd>'+humid+'</dd></dl>';
         forecastContainer.appendChild(div)
     })
 }
