@@ -13,6 +13,7 @@ var searchBtn = document.getElementById('search-btn')
 var cityList = document.querySelector('.cityList')
 var forecastContainer=document.getElementById('forecastContainer')
 var searchHistoryBtn=document.getElementById('searchHistoryBtn')
+var currentIcon = document.getElementById('icon')
 
 var apiKey = '7b109f561dbce00a44f73faa03e0edee';
 var baseUrl = 'http://api.openweathermap.org'
@@ -63,6 +64,7 @@ function getCityDayWeather(cityName) {
             console.log(data)
             var current = data.current;
             var temp = current.temp;
+            var icon= current.weather[0].icon
             var windSpeed = current.wind_speed;
             var humid = current.humidity;
             var uviIndex = current.uvi;
@@ -72,6 +74,15 @@ function getCityDayWeather(cityName) {
             wind.textContent=windSpeed;
             humidity.textContent=humid;
             uvIndex.textContent=uviIndex;
+            if(uviIndex<3) {
+                uvIndex.style.backgroundColor ='green';
+            } else if(uviIndex >= 3 && uviIndex < 6) {
+                uvIndex.style.backgroundColor='yellow'
+            } else {
+                uvIndex.style.backgroundColor='red'
+            }
+
+            currentIcon.src='http://openweathermap.org/img/wn/'+icon+'@2x.png'
 
             populate5Dasy(data.daily)
             
