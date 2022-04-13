@@ -75,6 +75,7 @@ function getCityDayWeather(cityName) {
             wind.textContent=windSpeed;
             humidity.textContent=humid;
             uvIndex.textContent=uviIndex;
+            uvIndex.style.color='white';
             if(uviIndex<3) {
                 uvIndex.style.backgroundColor ='green';
             } else if(uviIndex >= 3 && uviIndex < 6) {
