@@ -108,7 +108,7 @@ function populateButton(cityName) {
     })
     
 }
-
+//local Storage
 function storeCityLocation(cityName){
     console.log(cityName)
     var cities=window.localStorage.getItem('cities')
