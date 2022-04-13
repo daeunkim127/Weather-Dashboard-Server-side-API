@@ -8,5 +8,5 @@
 
 ![webpage-demo](./assets/images/Weather-Dashboard.gif)
 
-Link to Webpage : https://daeunkim127.github.io/Weather-Dashboard-Server-side-API/
-Link to Github page : https://github.com/daeunkim127/Weather-Dashboard-Server-side-API.git
+* Link to Webpage : https://daeunkim127.github.io/Weather-Dashboard-Server-side-API/
+* Link to Github page : https://github.com/daeunkim127/Weather-Dashboard-Server-side-API.git
