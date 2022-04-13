@@ -16,7 +16,7 @@ var searchHistoryBtn=document.getElementById('searchHistoryBtn')
 var currentIcon = document.getElementById('icon')
 
 var apiKey = '7b109f561dbce00a44f73faa03e0edee';
-var baseUrl = 'http://api.openweathermap.org'
+var baseUrl = 'https://api.openweathermap.org'
 
 
 function populate5Dasy (data) {
