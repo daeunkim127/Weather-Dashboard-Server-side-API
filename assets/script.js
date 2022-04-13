@@ -26,7 +26,7 @@ function populate5Dasy (data) {
             return;
         }
         var dt = day.dt
-        var date= moment(dt*1000).format('L')
+        var currentDate= moment(dt*1000).format('L')
         var temp=day.temp.day;
         var windSpeed=day.wind_speed;
         var humid=day.humidity;
@@ -34,7 +34,7 @@ function populate5Dasy (data) {
         var div = document.createElement('div')
         div.classList='card-weather col bg-dark text-light'
         console.log(icon)
-        div.innerHTML = '<h4>'+date+'</h4><img src="http://openweathermap.org/img/wn/'+icon+'@2x.png"/><dl><dt>Temp:</dt><dd>'+temp+'</dd><dt>Wind:</dt> <dd>'+windSpeed+'</dd><dt>Humidity:</dt><dd>'+humid+'</dd></dl>';
+        div.innerHTML = '<h4>'+currentDate+'</h4><img src="http://openweathermap.org/img/wn/'+icon+'@2x.png"/><dl><dt>Temp:</dt><dd>'+temp+'</dd><dt>Wind:</dt> <dd>'+windSpeed+'</dd><dt>Humidity:</dt><dd>'+humid+'</dd></dl>';
         forecastContainer.appendChild(div)
     })
 }
