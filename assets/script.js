@@ -41,6 +41,7 @@ function populate5Dasy (data) {
 
 function getCityDayWeather(cityName) {
     var url= baseUrl+'/geo/1.0/direct?q='+cityName+'&limit=1&appid='+apiKey;
+    console.log(url)
     fetch(url).then(function(response) {
         return response.json();
     })
